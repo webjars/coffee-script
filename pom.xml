@@ -66,7 +66,7 @@
                         <configuration>
                             <url>${upstream.url}</url>
                             <fromFile>coffee-script.js</fromFile>
-                            <toDir>${destinationDir}</toDir>
+                            <toFile>${destinationDir}/coffee-script.min.js</toFile>
                         </configuration>
                     </execution>
                 </executions>
