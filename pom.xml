@@ -22,6 +22,11 @@
             <name>James Ward</name>
             <email>james@jamesward.org</email>
         </developer>
+        <developer>
+            <id>moandji.ezana</id>
+            <name>Moandji Ezana</name>
+            <email>mwanji@gmail.com</email>
+        </developer>
     </developers>
 
     <licenses>
@@ -42,7 +47,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstream.version>1.4.0</upstream.version>
-        <upstream.url>http://mewf.co/coffee-script/${upstream.version}</upstream.url>
+        <upstream.url>https://raw.github.com/jashkenas/coffee-script/${upstream.version}/extras</upstream.url>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destinationDir>
     </properties>
 
@@ -60,7 +65,7 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>coffee-script.min.js</fromFile>
+                            <fromFile>coffee-script.js</fromFile>
                             <toDir>${destinationDir}</toDir>
                         </configuration>
                     </execution>
