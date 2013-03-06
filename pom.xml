@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>coffee-script</artifactId>
-    <version>1.4.1-SNAPSHOT</version>
+    <version>1.6.1-SNAPSHOT</version>
     <name>CoffeeScript</name>
     <description>WebJar for CoffeeScript</description>
     <url>http://webjars.org</url>
@@ -46,7 +46,7 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1.4.0</upstream.version>
+        <upstream.version>1.6.1</upstream.version>
         <upstream.url>https://raw.github.com/jashkenas/coffee-script/${upstream.version}/extras</upstream.url>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destinationDir>
     </properties>
