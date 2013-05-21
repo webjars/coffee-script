@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>coffee-script</artifactId>
-    <version>1.6.3-SNAPSHOT</version>
+    <version>1.6.2-1-SNAPSHOT</version>
     <name>CoffeeScript</name>
     <description>WebJar for CoffeeScript</description>
     <url>http://webjars.org</url>
@@ -47,7 +47,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <upstream.version>1.6.2</upstream.version>
-        <upstream.url>https://raw.github.com/jashkenas/coffee-script/${upstream.version}/extras</upstream.url>
+        <upstream.url>http://cdnjs.cloudflare.com/ajax/libs/coffee-script/${upstream.version}</upstream.url>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destinationDir>
     </properties>
 
@@ -65,7 +65,7 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>coffee-script.js</fromFile>
+                            <fromFile>coffee-script.min.js</fromFile>
                             <toFile>${destinationDir}/coffee-script.min.js</toFile>
                         </configuration>
                     </execution>
