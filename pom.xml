@@ -11,7 +11,7 @@
     <packaging>jar</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>coffee-script</artifactId>
-    <version>1.6.4-SNAPSHOT</version>
+    <version>1.7.0-SNAPSHOT</version>
     <name>CoffeeScript</name>
     <description>WebJar for CoffeeScript</description>
     <url>http://webjars.org</url>
@@ -46,8 +46,8 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstream.version>1.6.3</upstream.version>
-        <upstream.url>http://cdnjs.cloudflare.com/ajax/libs/coffee-script/${upstream.version}</upstream.url>
+        <upstream.version>1.7.0</upstream.version>
+        <upstream.url>https://raw.github.com/jashkenas/coffee-script/${upstream.version}/extras</upstream.url>
         <destinationDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstream.version}</destinationDir>
     </properties>
 
@@ -65,16 +65,36 @@
                         </goals>
                         <configuration>
                             <url>${upstream.url}</url>
-                            <fromFile>coffee-script.min.js</fromFile>
+                            <fromFile>coffee-script.js</fromFile>
                             <toFile>${destinationDir}/coffee-script.min.js</toFile>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>2.4.2</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.apache.maven.scm</groupId>
+                        <artifactId>maven-scm-provider-gitexe</artifactId>
+                        <version>1.9</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.5.1</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>sonatype-nexus-staging</serverId>
+                    <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
             </plugin>
         </plugins>
     </build>
