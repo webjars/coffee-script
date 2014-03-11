@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.webjars</groupId>
+        <artifactId>coffee-script-parent</artifactId>
+        <version>1.7.1-SNAPSHOT</version>
+    </parent>
+    
+    <packaging>jar</packaging>
+    <groupId>org.webjars</groupId>
+    <artifactId>coffee-script</artifactId>
+    <name>CoffeeScript</name>
+    <description>WebJar for CoffeeScript</description>
+    <url>http://webjars.org</url>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>wagon-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>process-resources</phase>
+                        <id>move</id>
+                        <goals><goal>run</goal></goals>
+                        <configuration>
+                            <target>
+                                <echo message="moving resources" />
+                                <move file="${extractDir}/extras/coffee-script.js" tofile="${destDir}/coffee-script.min.js" />
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
