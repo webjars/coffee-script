@@ -11,7 +11,7 @@
     <packaging>pom</packaging>
     <groupId>org.webjars</groupId>
     <artifactId>coffee-script-parent</artifactId>
-    <version>1.7.2-SNAPSHOT</version>
+    <version>1.8.0-SNAPSHOT</version>
     <name>CoffeeScript Parent</name>
     <description>WebJar for CoffeeScript Parent</description>
     <url>http://webjars.org</url>
@@ -40,10 +40,10 @@
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <upstreamVersion>1.7.1</upstreamVersion>
+        <upstreamVersion>1.8.0</upstreamVersion>
         <sourceUrl>https://github.com/jashkenas/coffee-script/archive</sourceUrl>
         <destDir>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${upstreamVersion}</destDir>
-        <extractDir>${project.build.directory}/coffee-script-${upstreamVersion}</extractDir>
+        <extractDir>${project.build.directory}/coffeescript-${upstreamVersion}</extractDir>
     </properties>
 
     <modules>
