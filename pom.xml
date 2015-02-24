@@ -82,8 +82,8 @@
                             <goals><goal>run</goal></goals>
                             <configuration>
                                 <target>
-                                    <echo message="unzip archive" />
-                                    <unzip src="${project.build.directory}/coffee-script.zip" dest="${project.build.directory}" />
+                                    <echo message="unzip archive"/>
+                                    <unzip src="${project.build.directory}/coffee-script.zip" dest="${project.build.directory}"/>
                                 </target>
                             </configuration>
                         </execution>

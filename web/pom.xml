@@ -31,8 +31,8 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="moving resources" />
-                                <move file="${extractDir}/extras/coffee-script.js" tofile="${destDir}/coffee-script.min.js" />
+                                <echo message="moving resources"/>
+                                <move file="${extractDir}/extras/coffee-script.js" tofile="${destDir}/coffee-script.min.js"/>
                             </target>
                         </configuration>
                     </execution>

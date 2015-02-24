@@ -30,11 +30,11 @@
                         <goals><goal>run</goal></goals>
                         <configuration>
                             <target>
-                                <echo message="moving resources" />
+                                <echo message="moving resources"/>
                                 <move todir="${destDir}/lib">
-                                    <fileset dir="${extractDir}/lib" />
+                                    <fileset dir="${extractDir}/lib"/>
                                 </move>
-                                <move file="${extractDir}/package.json" todir="${destDir}" />
+                                <move file="${extractDir}/package.json" todir="${destDir}"/>
                             </target>
                         </configuration>
                     </execution>
